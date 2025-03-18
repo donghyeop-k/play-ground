@@ -1,5 +1,113 @@
 module.exports = {
     root: true,
-    env: {browser: true, es2020: true, node: true},
-    extends: []
-}
+    env: { browser: true, es2020: true, node: true },
+    extends: [
+        'eslint:recommended',
+        'airbnb',
+        'airbnb/hooks',
+        'plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+        'plugin:react-hooks/recommended',
+        'plugin:import/recommended',
+        'plugin:prettier/recommended',
+    ],
+    plugins: ['react', 'react-hooks', 'react-refresh', 'import', 'prettier'],
+    ignorePatterns: ['dist', '.eslintrc.cjs'],
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    settings: {
+        react: { version: 'detect' },
+        'import/resolver': {
+            alias: {
+                map: [['@', './src']],
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            }
+        },
+    },
+    rules: {
+        'no-confusing-arrow': 'off',
+        'max-len': 'off',
+        'func-names': 'off',
+        'operator-linebreak': 'off',
+        'quotes': 'off',
+        'wrap-iife': 'off',
+        'implicit-arrow-linebreak': 'off',
+        'nonblock-statement-body-position': 'off',
+        'curly': 'off',
+        'function-paren-newline': 'off',
+        'arrow-body-style': 'off',
+        'indent': ['error', 4, { SwitchCase: 1 }],
+        'no-unused-vars': [
+            'warn',
+            {
+                vars: 'all',
+                args: 'after-used',
+                ignoreRestSiblings: false,
+                varsIgnorePattern: '^_',
+                argsIgnorePattern: '^_',
+                caughtErrors: 'none',
+            },
+        ],
+        'eqeqeq': ['error', 'always', { null: 'ignore' }],
+        'no-console': 'off',
+        'no-underscore-dangle': 'off',
+        'object-curly-newline': 'off',
+        'linebreak-style': 'off',
+        'no-param-reassign': 'off',
+        'no-multiple-empty-lines': 'off',
+        'arrow-parens': 'off',
+        'operator-assignment': 'off',
+        'no-plusplus': 'off',
+        'consistent-return': 'off',
+
+        'react/jsx-wrap-multilines': 'off',
+        'react/jsx-curly-newline': 'off',
+        'react/jsx-no-constructed-context-values': 'off',
+        'react/jsx-indent': ['error', 4],
+        'react/jsx-indent-props': ['error', 4],
+        'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+        'react/react-in-jsx-scope': 'off',
+        'react/forbid-prop-types': 'off',
+        'react/jsx-one-expression-per-line': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/jsx-no-useless-fragment': 'off',
+        'react/function-component-definition': 'off',
+        'react/button-has-type': 'off',
+        'react/require-default-props': 'off',
+        'react/prop-types': 'off',
+        'react/no-this-in-sfc': 'off',
+        'react/destructuring-assignment': [0, 'always'],
+
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+        'import/no-cycle': 'off',
+        'import/no-unresolved': 'error',
+        'import/extensions': [
+            'error',
+            'ignorePackages',
+            {
+                'js': 'never',
+                'jsx': 'never',
+                'ts': 'never',
+                'tsx': 'never',
+            }
+        ],
+        'import/prefer-default-export': 'off',
+
+        'jsx-a11y/control-has-associated-label': 'off',
+        'jsx-a11y/label-has-associated-control': 'off',
+        'jsx-a11y/anchor-is-valid': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+
+        'react-hooks/exhaustive-deps': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+
+        'react-refresh/only-export-components': 'off',
+        'react/jsx-no-target-blank': 'off',
+    },
+};
