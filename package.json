@@ -24,6 +24,7 @@
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^10.1.1",
         "eslint-config-react-app": "^7.0.1",
+        "eslint-import-resolver-alias": "^1.1.2",
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-prettier": "^5.2.3",
@@ -33,6 +34,7 @@
         "globals": "^15.15.0",
         "prettier": "^3.5.3",
         "vite": "^6.2.0",
+        "vite-plugin-checker": "^0.9.1",
         "vite-plugin-eslint": "^1.8.1"
     },
     "packageManager": "pnpm@10.6.4+sha512.da3d715bfd22a9a105e6e8088cfc7826699332ded60c423b14ec613a185f1602206702ff0fe4c438cb15c979081ce4cb02568e364b15174503a63c7a8e2a5f6c"

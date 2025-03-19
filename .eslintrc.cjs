@@ -90,10 +90,12 @@ module.exports = {
             'error',
             'ignorePackages',
             {
+                '': 'never',
                 'js': 'never',
                 'jsx': 'never',
                 'ts': 'never',
                 'tsx': 'never',
+                'css': 'always',
             }
         ],
         'import/prefer-default-export': 'off',

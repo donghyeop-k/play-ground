@@ -1,5 +1,5 @@
 function App() {
-    return <h1>동플그</h1>;
+    return <h1>Vite</h1>;
 }
 
 export default App;
