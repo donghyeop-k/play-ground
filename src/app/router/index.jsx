@@ -1,14 +1,20 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
+import { MainLayout } from '@/widgets/MainLayout';
 import { MainPage } from '@/pages/main';
 
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <MainLayout />,
+        children: [
+            { index: true, element: <Navigate to="/main" replace /> },
+            { path: 'main', element: <MainPage /> },
+        ],
+    },
+]);
+
 const RouterData = () => {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<MainPage />} />
-            </Routes>
-        </BrowserRouter>
-    );
+    return <RouterProvider router={router} />;
 };
 
 export default RouterData;
